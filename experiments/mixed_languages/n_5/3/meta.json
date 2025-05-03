@@ -1,0 +1,22 @@
+{
+     "byte_count": {
+          "zh": 1630000000,
+          "et": 980000000,
+          "pnb": 918000000,
+          "ml": 1631000000,
+          "sd": 4841000000
+     },
+     "total_bytes": 10000000000,
+     "train_files": {
+          "data/zh/zh.txt": 27,
+          "data/zh/zh_truncated_6126850.txt": 1,
+          "data/et/et.txt": 16,
+          "data/et/et_truncated_13690064.txt": 1,
+          "data/pnb/pnb.txt": 105,
+          "data/pnb/pnb_truncated_7089300.txt": 1,
+          "data/ml/ml.txt": 27,
+          "data/ml/ml_truncated_6960854.txt": 1,
+          "data/sd/sd.txt": 80,
+          "data/sd/sd_truncated_21847280.txt": 1
+     }
+}

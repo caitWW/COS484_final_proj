@@ -1,0 +1,22 @@
+{
+     "byte_count": {
+          "fa": 1242000000,
+          "ps": 386000000,
+          "ku": 7957999999,
+          "als": 47000000,
+          "fr": 367000000
+     },
+     "total_bytes": 10000000000,
+     "train_files": {
+          "data/fa/fa.txt": 20,
+          "data/fa/fa_truncated_38115300.txt": 1,
+          "data/ps/ps.txt": 6,
+          "data/ps/ps_truncated_24467162.txt": 1,
+          "data/ku/ku.txt": 153,
+          "data/ku/ku_truncated_48756646.txt": 1,
+          "data/als/als.txt": 21,
+          "data/als/als_truncated_931082.txt": 1,
+          "data/fr/fr.txt": 6,
+          "data/fr/fr_truncated_4218004.txt": 1
+     }
+}

@@ -1,0 +1,22 @@
+{
+     "byte_count": {
+          "ru": 2094000000,
+          "lt": 2187000000,
+          "vi": 225000000,
+          "ro": 4630000000,
+          "sk": 864000000
+     },
+     "total_bytes": 10000000000,
+     "train_files": {
+          "data/ru/ru.txt": 129,
+          "data/ru/ru_truncated_7288002.txt": 1,
+          "data/lt/lt.txt": 92,
+          "data/lt/lt_truncated_14464528.txt": 1,
+          "data/vi/vi.txt": 3,
+          "data/vi/vi_truncated_43957956.txt": 1,
+          "data/ro/ro.txt": 76,
+          "data/ro/ro_truncated_40958196.txt": 1,
+          "data/sk/sk.txt": 14,
+          "data/sk/sk_truncated_19056866.txt": 1
+     }
+}

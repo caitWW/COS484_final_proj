@@ -1,0 +1,22 @@
+{
+     "byte_count": {
+          "lo": 1405000000,
+          "th": 4753000000,
+          "ceb": 1265000000,
+          "si": 2519000000,
+          "sh": 57999999
+     },
+     "total_bytes": 10000000000,
+     "train_files": {
+          "data/lo/lo.txt": 23,
+          "data/lo/lo_truncated_21597909.txt": 1,
+          "data/th/th.txt": 78,
+          "data/th/th_truncated_59931490.txt": 1,
+          "data/ceb/ceb.txt": 63,
+          "data/ceb/ceb_truncated_11322869.txt": 1,
+          "data/si/si.txt": 41,
+          "data/si/si_truncated_52350005.txt": 1,
+          "data/sh/sh.txt": 12,
+          "data/sh/sh_truncated_508683.txt": 1
+     }
+}

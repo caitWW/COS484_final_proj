@@ -1,0 +1,21 @@
+{
+     "byte_count": {
+          "no": 3133000000,
+          "sw": 5820000000,
+          "xmf": 292000000,
+          "es": 2000000,
+          "ku": 753000000
+     },
+     "total_bytes": 10000000000,
+     "train_files": {
+          "data/no/no.txt": 51,
+          "data/no/no_truncated_54189517.txt": 1,
+          "data/sw/sw.txt": 819,
+          "data/sw/sw_truncated_5996805.txt": 1,
+          "data/xmf/xmf.txt": 79,
+          "data/xmf/xmf_truncated_2545659.txt": 1,
+          "data/es/es_truncated_2000000.txt": 1,
+          "data/ku/ku.txt": 14,
+          "data/ku/ku_truncated_29278386.txt": 1
+     }
+}
