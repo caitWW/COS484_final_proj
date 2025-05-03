@@ -1,23 +1,29 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# ─── CONFIGURE YOUR SWEEP ───────────────────────────────────────────────────────
-# list of n values to try:
-ns=(5 10 30 112)
+# ─── 0) LOAD AMD COMPILERS & MATH LIBRARIES ─────────────────────────────────────
+# this makes clang/clang++ available as 'clang' and brings BLIS, libFLAME, FFTW, etc.
+module load aocc/5.0.0
+module load aocl/aocc/5.0.0
+# if you have MPI steps that use C:
+# module load openmpi/aocc-5.0.0/4.1.6
 
-# list of test_id values to try:
+# ─── 1) CONFIGURE YOUR SWEEP ─────────────────────────────────────────────────────
+ns=(1 2 3 4)
 test_ids=(1 2 3 4 5)
 
-# base dirs (you can tweak these if your layout changes)
 corpus_dir="../data/processed"
 base_exp_dir="../data/processed/experiments/mixed_languages"
 
-# ─── SWEEP LOOP ─────────────────────────────────────────────────────────────────
+# ─── 2) OPTIONAL: COMPILE ANY C/C++ EXTENSIONS ───────────────────────────────────
+# If you have a C/C++ program you need to compile before the Python steps, do it here:
+# clang++ -Ofast -march=native -o bin/my_extension src/my_extension.cpp
+
+# ─── 3) SWEEP ────────────────────────────────────────────────────────────────────
 for n in "${ns[@]}"; do
   for test_id in "${test_ids[@]}"; do
     echo
     echo "=== Running pipeline for n=$n, test_id=$test_id ==="
-
     output_dir="$base_exp_dir/n_${n}/${test_id}"
     mkdir -p "$output_dir"
 
