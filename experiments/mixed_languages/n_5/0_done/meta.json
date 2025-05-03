@@ -1,0 +1,22 @@
+{
+     "byte_count": {
+          "gl": 205000000,
+          "ml": 1945000000,
+          "de": 2152000000,
+          "th": 765000000,
+          "xmf": 4933000000
+     },
+     "total_bytes": 10000000000,
+     "train_files": {
+          "data/gl/gl.txt": 3,
+          "data/gl/gl_truncated_24011200.txt": 1,
+          "data/ml/ml.txt": 32,
+          "data/ml/ml_truncated_20212864.txt": 1,
+          "data/de/de.txt": 35,
+          "data/de/de_truncated_38730975.txt": 1,
+          "data/th/th.txt": 12,
+          "data/th/th_truncated_42989460.txt": 1,
+          "data/xmf/xmf.txt": 1346,
+          "data/xmf/xmf_truncated_1284266.txt": 1
+     }
+}
