@@ -45,12 +45,16 @@ DEFAULT_NUM_BYTES = 10**9
     default=DEFAULT_NUM_BYTES
 )
 def main(experiment_dir: str, lang_code: str, corpus_dir: str, model_name: str, num_bytes: int):
-    corpus_dir = Path(corpus_dir)
+    corpus_dir = Path(corpus_dir).resolve()
     experiment_dir = Path(experiment_dir)
     lang_dir = lang_code if num_bytes == DEFAULT_NUM_BYTES else f'{lang_code}/{"{:.0e}".format(num_bytes).replace("e+", "e")}'
-    os.chdir('/gscratch/xlab/alisaliu/hack-tokenizers')
+    os.chdir(corpus_dir)
 
     print(f'We will dump frequencies in {experiment_dir}/{lang_dir}...')
+
+    if not experiment_dir.exists():
+        print("ERROR: Directory doesn't exist:", experiment_dir.resolve())
+        exit(1)
 
     # cd into the folder because tokenizer.train() will check to see if merges.txt exists here
     os.chdir(experiment_dir)
