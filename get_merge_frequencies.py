@@ -14,9 +14,9 @@ def get_languages_from_meta(meta_path):
     languages = list(byte_count.keys())
     return languages
 
-def run_dump_frequencies(test_id, lang_list):
-    corpus_dir = "../data/processed"
-    experiment_dir = f"experiments/mixed_languages/n_5/{test_id}"
+def run_dump_frequencies(test_id, n, lang_list):
+    corpus_dir = "../data/processed/"
+    experiment_dir = f"experiments/mixed_languages/n_{n}/{test_id}"
 
     for lang in lang_list:
         print(f"➡️  Running dump_frequencies for: {lang}")
@@ -28,9 +28,16 @@ def run_dump_frequencies(test_id, lang_list):
         ], check=True)
         print(f"✅ Done with {lang}\n")
 
+import argparse
 
 if __name__ == "__main__":
-    meta_path = "../data/processed/experiments/mixed_languages/n_5/0/meta.json"
+    parser = argparse.ArgumentParser(
+    )
+    parser.add_argument("--meta_path")
+    parser.add_argument("--exp_num")
+    parser.add_argument("--n")
+    args = parser.parse_args()
+    meta_path = args.meta_path # change this!!!
     langs = get_languages_from_meta(meta_path)
     print("Languages in byte_count:", langs)
-    run_dump_frequencies(0, langs)
+    run_dump_frequencies(args.exp_num, args.n, langs) # change this!!!
